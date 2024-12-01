@@ -11,7 +11,7 @@ import { User } from './user.model';
 export class UserComponent {
   // We can create an external object
   @Input({required: true}) user!: User;
-  
+  @Input({required: true}) selected!: boolean;
   @Output() select = new EventEmitter<string>();
 
   get imagePath(){

@@ -1,5 +1,5 @@
 <div>
-<button (click)="onSelectUser()">
+<button [class.active]="selected" (click)="onSelectUser()">
     <!-- <img src="{{selectedUser.avatar}}"/>   NOT WORKING due to the cotes -->
      <!-- WORKING with [] -->
     <img 
