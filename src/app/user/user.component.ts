@@ -1,5 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {DUMMY_USERS} from '../dummy-users';
+
+type User = {
+  id: string;
+  avatar: string;
+  name: string;
+}
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -8,11 +15,7 @@ import {DUMMY_USERS} from '../dummy-users';
 })
 export class UserComponent {
   // We can create an external object
-  @Input({required: true}) user!: {
-    id: string;
-    avatar: string;
-    name: string;
-  }
+  @Input({required: true}) user!: User;
   
   @Output() select = new EventEmitter<string>();
 
